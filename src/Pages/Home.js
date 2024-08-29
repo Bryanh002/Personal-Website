@@ -19,7 +19,7 @@ function HomePage() {
     useEffect(() => {
       const timer = setTimeout(() => {
         setIsAnimated(true);
-      }, 1500); // Adjust the delay as needed
+      }, 1500);
       return () => clearTimeout(timer);
     }, []);
 
@@ -62,12 +62,18 @@ function HomePage() {
   
         {/*main page text container*/}
         <Element name="home" className="relative z-10 min-h-screen overflow-hidden bg-transparent text-white">
-          <div className="flex-grow flex flex-col items-center justify-center pt-20 pr-[1350px] fixed inset-0 h-screen z-20">
-            <h1 className="text-4xl pr-40 pl-3 pb-2">Hey <span role="img" aria-label="wave">👋</span>,</h1>
-            <h2 className="text-6xl font-bold transition ease-in duration-300 hover:scale-110 pl-4">I'm Bryan!</h2>
-            <Link to="timeline-section" smooth={true} duration={1000} className="text-lg pt-4 pl-16 transition ease-in duration-300 hover:scale-105 cursor-pointer">
+          <div className="flex-grow flex flex-col items-center justify-center pt-56 pr-[1350px] fixed inset-0 h-screen z-20">
+
+            <h1 className={`text-4xl pr-40 pb-2 transition-colors duration-500 delay-1000 ease-in-out ${isAnimated ? 'text-white' : 'text-black'}`}
+              >Hey<span role="img" aria-label="wave">👋</span>,</h1>
+
+            <h2 className={`text-6xl font-bold transition ease-in-out duration-300 delay-1000 hover:scale-110 hover:delay-0 pl-4 ${isAnimated ? 'text-white' : 'text-black'}`}>
+              I'm Bryan!</h2>
+
+            <Link to="timeline-section" smooth={true} duration={1000} className={`text-lg pt-4 pl-16 transition ease-in-out delay-1000 duration-300 hover:scale-105 hover:delay-0 cursor-pointer ${isAnimated ? 'text-white' : 'text-black'}`}>
               Click to learn more about me
             </Link>
+            
           </div>
         </Element>
   
