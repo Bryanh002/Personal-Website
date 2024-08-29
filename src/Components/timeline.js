@@ -17,12 +17,14 @@ const Timeline = () => {
             <p>Got into Mechatronics program with Artificial Intelligence Systems Engineering Dual Degree <span role="img" aria-label="trophy">🏆</span></p>
             <p>Achieved Dean's Honor's List again <span role="img" aria-label="graduation cap">🎓</span></p>
             <p>Joined WeMars Club <span role="img" aria-label="rocket">🚀</span></p>
+            <p>Joined Aero Design Club</p>
           </div>
         </div>
-        <div className="timeline-item mb-10">
+        <div className="timeline-item mb-2">
           <div className="year text-xl font-bold text-gray-800 mb-2">2024</div>
           <div className="details text-gray-700">
-            <p>Became WeMars Software Lead <span role="img" aria-label="rocket">🚀</span></p>
+            <p>Became WeMars Lead Software Engineer <span role="img" aria-label="rocket">🚀</span></p>
+            <p>Plan to acheive Dean's Honor list again!<span role="img" aria-label="graduation cap">🎓</span></p>
           </div>
         </div>
       </div>

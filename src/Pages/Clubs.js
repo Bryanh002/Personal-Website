@@ -49,7 +49,7 @@ function ClubsPage() {
 
 
     return(
-        <div className="bg-blue-200 h-[1700px]">
+        <div className="bg-gradient-to-b from-blue-200 to-blue-400 h-[1700px]">
             {/*navbar*/}
             <div className="fixed top-0 flex justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-20 pt-4 bg-white shadow-lg z-10">
                 <nav>
@@ -63,10 +63,12 @@ function ClubsPage() {
 
 
             <div className="w-full h-[1000px] pt-56">
-                <img className={`w-[450px] h-[200px] ml-56 transform transition-all delay-150 duration-1000 ${showContent ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`} src={WeMarsLogo}></img>
-                <div className={`bg-white w-[1000px] h-72 mt-20 ml-56 rounded-lg shadow-md transform transition-all duration-1000 ${showContent ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
-                    <h1 className="ml-10 pt-5 font-semibold text-2xl font-serif">Lead Software Engineer</h1>
-                    <p className="ml-10 mr-10 pt-5 font-serif">My time with WeMars has enhanced my practical software development skills. I have worked with a variety of devices, including the Intel D345 Camera, ESP32 Cams, MPU6050 IMU, and GY-NEO6MV2 GPS module. I have also developed expertise in using the CAN Bus protocol for data transfer from these devices to a front-end interface for our team's monitoring purposes. Our data pipeline involved using an ESP-board with an installed CAN Hub to collect data, which was then transmitted to a Raspberry Pi. The Raspberry Pi forwarded this data to our communication radios, and ultimately, the information was displayed on our front-end interface for easy viewing and analysis.</p>
+                <div className={`transform transition-all duration-1000 ease-in-out ${showContent ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
+                    <img className="w-[450px] h-[200px] ml-56" src={WeMarsLogo}></img>
+                    <div className={`bg-white w-[1000px] h-72 mt-20 ml-56 rounded-lg shadow-md`}>
+                        <h1 className="ml-10 pt-5 font-semibold text-2xl font-serif">Lead Software Engineer</h1>
+                        <p className="ml-10 mr-10 pt-5 font-serif">My time with WeMars has enhanced my practical software development skills. I have worked with a variety of devices, including the Intel D345 Camera, ESP32 Cams, MPU6050 IMU, and GY-NEO6MV2 GPS module. I have also developed expertise in using the CAN Bus protocol for data transfer from these devices to a front-end interface for our team's monitoring purposes. Our data pipeline involved using an ESP-board with an installed CAN Hub to collect data, which was then transmitted to a Raspberry Pi. The Raspberry Pi forwarded this data to our communication radios, and ultimately, the information was displayed on our front-end interface for easy viewing and analysis.</p>
+                    </div>
                 </div>
             </div>
 

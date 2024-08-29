@@ -51,7 +51,7 @@ function ProjectPage() {
 
     return(
 
-        <div className="bg-blue-200 h-[3000px]">
+        <div className=" bg-gradient-to-b from-blue-200 to-blue-300 h-[1500px]">
 
         
             <div className="fixed top-0 flex justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-20 pt-4 bg-white shadow-lg z-10">
@@ -107,12 +107,6 @@ function ProjectPage() {
                 </div>
             </div>
 
-            
-      
-
-            
-
-            <div className="bg-blue-200 h-36 w-full"></div>
         </div>
     );
 
