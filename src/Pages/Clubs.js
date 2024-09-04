@@ -10,7 +10,15 @@ import WAeroDesignLogo from '../images/WAeroDesignLogo.png'
 function ClubsPage() {
     const [showContent, setShowContent] = useState(false);
     const [visible, setVisible] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+  
+
     const ref = useRef(null);
+
 
     useEffect(() => {
         setShowContent(true);
@@ -49,17 +57,43 @@ function ClubsPage() {
 
 
     return(
-        <div className="bg-gradient-to-b from-blue-200 to-blue-400 h-[1700px]">
-            {/*navbar*/}
-            <div className="fixed top-0 flex justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-20 pt-4 bg-white shadow-lg z-10">
-                <nav>
-                    <button onClick={handleGitHubButtonClick}><img src={GithubIcon} className="fixed top-[9px] left-8 h-9 w-9 hover:scale-105 ease-in-out duration-300"></img></button>
-                    <button onClick={handleLinkedInButtonClick}><img src={LinkedinIcon} className="fixed top-1 left-24 h-12 w-12 hover:scale-105 ease-in-out duration-300"></img></button>
-                    <ButtonLink to='/home' className="relative group mr-16">Home<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-                    <ButtonLink to='/projects' className="relative group mr-16">Personal Projects<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-                    <ButtonLink to='/clubs' className="relative group mr-16">Clubs<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-                </nav>
+        <div id="clubs" className="h-[1700px] mt-12">
+            
+            <div className="fixed top-0 w-full bg-white shadow-lg z-20 p-4 flex justify-between items-center">
+            <div className="sm:hidden">
+                <button onClick={toggleMenu} className="text-gray-500 focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                </button>
             </div>
+            </div>
+    
+            {/* Desktop Menu */}
+            <div className="hidden fixed top-0 sm:flex sm:justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-20 pt-4 bg-white shadow-lg z-20">
+            <nav>
+                <button onClick={handleGitHubButtonClick}><img src={GithubIcon} className="fixed top-[9px] left-8 h-9 w-9 hover:scale-105 ease-in-out duration-300 hidden sm:block "></img></button>
+                <button onClick={handleLinkedInButtonClick}><img src={LinkedinIcon} className="fixed top-1 left-24 h-12 w-12 hover:scale-105 ease-in-out duration-300 hidden sm:block"></img></button>
+                <ButtonLink to='/home' className="sm:ml-16 relative group sm:mr-16 ">Home<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+                <ButtonLink to='/projects' className="relative group sm:mr-16">Personal Projects<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+                <ButtonLink to='/clubs' className="relative group sm:mr-16">Clubs<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+                <ButtonLink to='/clubs' className="relative group sm:mr-16">Resume<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+            </nav>
+            </div>
+        
+
+            {/* Mobile Menu */}
+            {isMenuOpen && (
+                <div className="sm:hidden bg-white shadow-lg p-4 absolute top-[60px] left-0 w-full z-20">
+                <nav className="flex flex-col space-y-4">
+                    <ButtonLink to='/home' className="text-center">Home</ButtonLink>
+                    <ButtonLink to='/projects' className="text-center">Personal Projects</ButtonLink>
+                    <ButtonLink to='/clubs' className="text-center">Clubs</ButtonLink>
+                    <ButtonLink to='/resume' className="text-center">Resume</ButtonLink>
+                </nav>
+                </div>
+            )}
+  
 
 
             <div className="w-full h-[1000px] pt-56">
