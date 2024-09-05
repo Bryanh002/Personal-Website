@@ -121,7 +121,7 @@ function HomePage() {
                 <h1 className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white bg-black bg-opacity-50">My Timeline</h1>
               </div>
               <div id="banner" className="relative h-6 shadow-xl z-30"></div>
-              <div className="pt-20">
+              <div className="pt-10">
               <Timeline />
               </div>
             </div>
@@ -129,7 +129,7 @@ function HomePage() {
           <div className="bg-slate-200 h-96">
             <div>
             <div className="text-3xl p-2 pt-12 group border w-full flex justify-center" style={{ clipPath: 'inset(0 0 0 0 )' }}>
-                <div className="[grid-area:1/1] flex items-center justify-center mt-20 sm:mt-0 h-20 w-full transition ease-in-out duration-1000 hover:translate-y-10"><DownArrow /></div>
+                <div className="[grid-area:1/1] flex items-center justify-center pb-20 sm:mb-0  h-20 w-full transition ease-in-out duration-1000 hover:translate-y-10"><DownArrow /></div>
             </div>
             <div className="flex justify-center w-full">
                 <ButtonLink to='/projects' className="text-xl font-semibold bg-blue-300 rounded-lg mt-2 sm:mt-2 px-4 py-4 shadow-md hover:scale-105 ease-in-out duration-300 hover:shadow-lg">My Projects!</ButtonLink>

@@ -27,8 +27,8 @@ function ProjectPage() {
 
     const handleAiTagClick = () => {
         
-
         setIsAiActive(!isAiActive);
+        
     }
 
     const handleARoboticsTagClick = () => {
@@ -59,7 +59,7 @@ function ProjectPage() {
 
     return(
 
-        <div id="projects" className="h-[1700px] sm:h-[1600px]">
+        <div id="projects" className="h-[2000px] sm:h-[1600px]">
 
         
             <div className="fixed top-0 w-full bg-white shadow-lg z-20 p-4 flex justify-between items-center">
@@ -99,7 +99,7 @@ function ProjectPage() {
 
 
             <div className="pt-36">
-                <div className="bg-white h-[1400px] sm:h-[1300px] w-full scale-x-90 rounded-lg shadow-lg">
+                <div className="bg-white h-[1700px] sm:h-[1300px] w-full scale-x-90 rounded-lg shadow-lg">
                     <div className="h-20 w-full flex justify-left items-center">
                         <p className="pl-6 sm:pl-14 pb-2 text-2xl relative">
                         Tags:
@@ -115,32 +115,44 @@ function ProjectPage() {
                     {/*Project Cards*/}
 
                     <div className="h-full w-full">
-                        <div className="flex justify-center">
-                            <div id="robotic-arm" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[350px] rounded-lg shadow-md flex hover:shadow-xl ease-in-out duration-300">
-                                <div className="w-[510px] h-72 sm:h-full scale-75 scale-y-50 sm:scale-90 shadow-md rounded-lg overflow-hidden border-white border-2 border-solid"><img src={Roboticarm} className='w-full h-full'></img></div>
-                                <div className="w-[850px] mt-2 font-bold font-serif text-2xl hidden sm:block">IOT Robot Arm: 
-                                <p className="font-normal text-lg">For this project I built an Internet of Things robotic arm, this means that to control the arm I designed a desktop app that connects via bluetooth, It controlled the arm with sliders that can choose the servo motor's positions. The robotic arm itself has 6 degrees of freedom, The base, Shoulder joint, First Elbow Joint, Second Elbow Joint, Wrist joint and Gripper, this allows for greater mobility and range. In Terms of the electrical side it is all connected in circuit via an arduino UNO, Servo Driver, Stepper Motor Driver and a Breadboard. </p>
-                                <button className="mt-9 text-lg" onClick={handleRobotButtonClick}>Click to Learn More</button>
+                        <div className={`flex justify-center ${isFActive ? 'hidden' : 'visible'} ${isAiActive ? 'hidden' : 'visible'}`}>
+                                <div id="robotic-arm" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[450px] rounded-lg shadow-md flex flex-col sm:flex-row hover:shadow-xl ease-in-out duration-300">
+                                    <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-white border-2 border-solid">
+                                        <img src={Roboticarm} className="w-full h-56 sm:h-full"></img>
+                                    </div>
+                                    <div className="w-full sm:w-[850px] sm:mt-2 font-bold font-serif text-lg sm:text-2xl sm:text-left text-center">
+                                        <p>IOT Robot Arm:</p>
+                                        <p className="font-normal text-sm sm:hidden">I built a robotic arm with 6 Degrees of freedom and controlled it with a bluetooth app!</p>
+                                        <p className="font-normal text-lg hidden sm:block">
+                                            For this project I built an Internet of Things robotic arm, this means that to control the arm I designed a desktop app that connects via Bluetooth. The robotic arm has 6 degrees of freedom: base, shoulder joint, two elbow joints, wrist, and gripper, providing greater mobility. The system includes an Arduino UNO, servo driver, stepper motor driver, and a breadboard for the electronics.
+                                        </p>
+                                        <button className="mt-9 text-lg" onClick={handleRobotButtonClick}>Click to Learn More</button>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div className={`flex justify-center ${isRActive ? 'hidden' : 'visible' } ${isAiActive ? 'hidden' : 'visible' }`}>
+                            <div id="Financial Website" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[450px] rounded-lg shadow-md flex flex-col sm:flex-row hover:shadow-xl ease-in-out duration-300">
+                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg border-white border-2 border-solid">
+                                    <img src={project2} className='w-full h-56 sm:h-full'></img>
+                                </div>
+                                <div className="w-full sm:w-[850px] sm:mt-2 mb-16 sm:mb-0 font-bold font-serif text-lg sm:text-2xl sm:text-left text-center">Financial Management Website: 
+                                    <p className="font-normal text-sm sm:hidden">I created a full-stack application for managing funds, investments, checking crypto and stock prices and also financial news articles. This was done with the use of a python backend utilizing multiple API's</p>
+                                    <p className="font-normal text-lg hidden sm:block">For this project I created a full-stack application that allows the user to manage their bank accounts using Plaid API, manage investments, check any stock and crypto prices in real-time, as well as easily view financial news. The Front-end was created using react-js, and the back-end utilized python with a Flask framework for sending API requests.</p>
+                                    <button className="mt-10 text-lg" onClick={handleRobotButtonClick}>Click to Learn More</button>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex justify-center">
-                            <div id="Financial Website" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[350px] rounded-lg shadow-md flex hover:shadow-xl ease-in-out duration-300">
-                                <div className="w-[510px] h-72 sm:h-full scale-75 scale-y-50 sm:scale-90 shadow-md rounded-lg overflow-hidden border-white border-2 border-solid"><img src={project2} className='w-full h-full'></img></div>
-                                <div className="w-[850px] mt-2 font-bold font-serif text-2xl hidden sm:block">Financial Management Website: 
-                                <p className="font-normal text-lg"></p>
-                                <button className="mt-52 text-lg" onClick={handleRobotButtonClick}>Click to Learn More</button>
+                        <div className={`flex justify-center ${isFActive ? 'hidden' : 'visible' } ${isRActive ? 'hidden' : 'visible' }`}>
+                            <div id="Ai-project" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[450px] rounded-lg shadow-md flex flex-col sm:flex-row hover:shadow-xl ease-in-out duration-300">
+                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-white border-2 border-solid">
+                                    <img src={project3} className='w-full h-full'></img>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div className="flex justify-center">
-                            <div id="robotic-arm" className="bg-slate-100 mt-14 sm:h-72 sm:w-[1350px] w-[320px] h-[350px] rounded-lg shadow-md flex hover:shadow-xl ease-in-out duration-300">
-                                <div className="w-[510px] h-72 sm:h-full scale-75 scale-y-50 sm:scale-90 shadow-md rounded-lg overflow-hidden border-white border-2 border-solid"><img src={project3} className='w-full h-full'></img></div>
-                                <div className="w-[850px] mt-2 font-bold font-serif text-2xl hidden sm:block">YOLOV3 Reseach Implementation 
-                                <p className="font-normal text-lg"></p>
-                                <button className="mt-52 text-lg" onClick={handleRobotButtonClick} >Click to Learn More</button>
+                                <div className="w-full sm:w-[850px] mt-2 font-bold font-serif text-lg sm:text-2xl text-center sm:text-left">YOLOV3 Reseach Implementation:
+                                <p className="font-normal text-sm sm:hidden">I trained and fine-tuned a computer vision model based off of the YOLOv3 research paper, this involved understanding the concepts of the paper and applying them. I  managed to retain a mean average precision of 51.2% compared to YOLOv3's 57.9%</p>
+                                <p className="font-normal text-lg hidden sm:block">For this project I used a pre-made dataset to train my own Computer Vision model completely based off of the YOLOv3 research paper. This project involved reading and understanding the concepts and techniques in the paper for training weights, understanding model architecture, training the model, setting loss functions, model evaluation and last but not least optimizing and fine-tuning the model. This project was quite successful as I was able to retain a mean Average Precision of 51.2% compared to YOLOv3's 57.9% </p>
+                                <button className="mt-4 pb-10 sm:mt-9 text-lg" onClick={handleRobotButtonClick} >Click to Learn More</button>
                                 </div>
                             </div>
                         </div>
