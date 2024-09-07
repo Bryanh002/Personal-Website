@@ -3,7 +3,7 @@ import React,  { useState } from 'react';
 import Roboticarm from '../images/Roboticarm.jpg';
 import GithubIcon from'../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
-import project2 from '../images/project2.png';
+import project2 from '../images/project2.jpg';
 import project3 from '../images/Yolo_V3.jpg';
 import resume from '../images/Bryan_Heddle_resume2.pdf'
 
