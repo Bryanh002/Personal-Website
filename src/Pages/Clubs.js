@@ -57,7 +57,7 @@ function ClubsPage() {
 
 
     return(
-        <div id="clubs" className="h-[1800px] pt-12">
+        <div id="clubs" className="sm:h-[1500px] h-[2200px] pt-12">
             
             <div className="fixed top-0 w-full bg-white shadow-lg z-20 p-4 flex justify-between items-center">
             <div className="sm:hidden">
@@ -70,7 +70,7 @@ function ClubsPage() {
             </div>
     
             {/* Desktop Menu */}
-            <div className="hidden fixed top-0 sm:flex sm:justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-20 pt-4 bg-white shadow-lg z-20">
+            <div className="hidden fixed top-0 sm:flex sm:justify-end space-x-8 text-lg font-semibold mb-10 w-full p-2 pb-4 pr-2 pt-4 bg-white shadow-lg z-20">
             <nav>
                 <button onClick={handleGitHubButtonClick}><img src={GithubIcon} className="fixed top-[9px] left-8 h-9 w-9 hover:scale-105 ease-in-out duration-300 hidden sm:block "></img></button>
                 <button onClick={handleLinkedInButtonClick}><img src={LinkedinIcon} className="fixed top-1 left-24 h-12 w-12 hover:scale-105 ease-in-out duration-300 hidden sm:block"></img></button>
@@ -96,20 +96,21 @@ function ClubsPage() {
   
 
 
-            <div className="w-full h-[1000px] pt-24 sm:pt-56">
+            <div className="w-full h-[1100px] sm:h-[700px] pt-24">
                 <div className={`transform transition-all duration-1000 ease-in-out ${showContent ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
-                    <div className="flex justify-center sm:justify-normal"><img className="w-auto h-auto sm:w-[450px] sm:h-[200px] sm:ml-56" src={WeMarsLogo}></img></div>
-                    <div className="flex justify-center sm:justify-normal"><div className={`bg-white mx-4 sm:mx-0 pb-8 sm:pb-0 w-auto h-auto sm:w-[1000px] sm:h-72 sm:mt-20 mt-5 sm:ml-56 rounded-lg shadow-md`}>
+                    <div className="flex justify-center sm:justify-start"><img className="w-auto h-auto sm:w-[450px] sm:h-[200px] sm:ml-20" src={WeMarsLogo}></img></div>
+                    <div className="flex justify-center sm:justify-start"><div className={`bg-white mx-4 sm:mr-20 pb-8 sm:pb-0 w-auto h-auto sm:w-[1000px] sm:mt-10 mt-5 sm:ml-20 rounded-lg shadow-md`}>
                         <h1 className="ml-10 pt-5 font-semibold text-2xl font-serif">Lead Software Engineer</h1>
-                        <p className="ml-10 mr-10 pt-5 font-serif">My time with WeMars has enhanced my practical software development skills. I have worked with a variety of devices, including the Intel D345 Camera, ESP32 Cams, MPU6050 IMU, and GY-NEO6MV2 GPS module. I have also developed expertise in using the CAN Bus protocol for data transfer from these devices to a front-end interface for our team's monitoring purposes. Our data pipeline involved using an ESP-board with an installed CAN Hub to collect data, which was then transmitted to a Raspberry Pi. The Raspberry Pi forwarded this data to our communication radios, and ultimately, the information was displayed on our front-end interface for easy viewing and analysis.</p>
+                        <p className="ml-10 mr-10 pt-5 font-serif pb-10">My time with WeMars has enhanced my practical software development skills. I have worked with a variety of devices, including the Intel D345 Camera, ESP32 Cams, MPU6050 IMU, and GY-NEO6MV2 GPS module. I have also developed expertise in using the CAN Bus protocol for data transfer from these devices to a front-end interface for our team's monitoring purposes. Our data pipeline involved using an ESP-board with an installed CAN Hub to collect data, which was then transmitted to a Raspberry Pi. The Raspberry Pi forwarded this data to our communication radios, and ultimately, the information was displayed on our front-end interface for easy viewing and analysis.</p>
                     </div></div>
                 </div>
             </div>
+           
 
-            <div ref={ref} className="w-full h-[700px] pt-10">
+            <div ref={ref} className="w-full h-[600px] sm:h-[500px] pt-36">
                 <div className={`transform transition-all duration-1000 ease-in-out ${visible ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-                <div className="flex justify-center sm:justify-normal"><img className="w-auto h-auto sm:ml-[1277px] ml-10 sm:w-[450px] sm:h-[200px]" src={WAeroDesignLogo} alt="WAeroDesign Logo" /></div>
-                <div className="flex justify-center sm:justify-normal"><div className="bg-white mx-4 sm:mx-0 pb-8 sm:pb-0 w-auto h-auto sm:w-[1000px] sm:h-72 mt-10 sm:mt-20 sm:ml-[679px] rounded-lg shadow-md">
+                <div className="flex justify-center sm:justify-end"><img className="w-auto h-auto sm:mr-10 ml-8 sm:ml-0 sm:w-[450px] sm:h-[200px]" src={WAeroDesignLogo} alt="WAeroDesign Logo" /></div>
+                <div className="flex justify-center sm:justify-end"><div className="bg-white mx-4 sm:mr-20 px-2 sm:mx-0 pb-8 sm:pb-0 w-auto h-auto sm:w-[1000px] sm:h-48 mt-10 rounded-lg shadow-md">
                     <h1 className="sm:ml-[680px] pl-10 sm:pl-0 pt-5 font-semibold text-2xl">Junior Controls Engineer</h1>
                     <p className="ml-10 mr-10 pt-5 ">In this I club I was taught by senior leads how to properly code a react.js front-end for displaying data and pair it with a database for storing the data, all in real-time. This also involved setting up a Docker file to allow the program to be very user friendly. I was also taught basic PCB design and soldering for electrical components. </p>
                 </div></div>
