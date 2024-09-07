@@ -5,7 +5,7 @@ import GithubIcon from'../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
 import project2 from '../images/project2.jpg';
 import project3 from '../images/Yolo_V3.jpg';
-import resume from '../images/Bryan_Heddle_resume2.pdf'
+
 
 
 function ProjectPage() {
@@ -78,7 +78,7 @@ function ProjectPage() {
           <iframe
             title="Bryan Heddle Resume"
             className="h-[90vh] w-[80vw]"
-            src={resume}
+            src="/Bryan_Heddle_resume2.pdf"
             style={{
               border: "none",
               transform: "scale(1)", // Adjust scale as needed

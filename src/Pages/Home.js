@@ -7,8 +7,8 @@ import { DownArrow, ResumeIcon } from '../Components/Icons.js';
 import GithubIcon from '../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
 import React, {useState, useEffect} from 'react';
-import BryanImage from '../images/Bryan_Landscape.jpg'
-import resume from '../images/Bryan_Heddle_resume2.pdf'
+import BryanImage from '../images/Bryan_Landscape.jpg';
+
 
 
 
@@ -64,7 +64,7 @@ function HomePage() {
         <iframe
           title="Bryan Heddle Resume"
           className="h-[90vh] w-[80vw]"
-          src={resume}
+          src="/Bryan_Heddle_resume2.pdf"
           style={{
             border: "none",
             transform: "scale(1)", // Adjust scale as needed

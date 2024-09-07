@@ -3,8 +3,8 @@ import ButtonLink from '../Components/ButtonLink';
 import GithubIcon from '../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
 import WeMarsLogo from '../images/WeMarsLogo.png';
-import WAeroDesignLogo from '../images/WAeroDesignLogo.png'
-import resume from '../images/Bryan_Heddle_resume2.pdf'
+import WAeroDesignLogo from '../images/WAeroDesignLogo.png';
+
 
 
 
@@ -78,7 +78,7 @@ function ClubsPage() {
           <iframe
             title="Bryan Heddle Resume"
             className="h-[90vh] w-[80vw]"
-            src={resume}
+            src="/Bryan_Heddle_resume2.pdf"
             style={{
               border: "none",
               transform: "scale(1)", // Adjust scale as needed
