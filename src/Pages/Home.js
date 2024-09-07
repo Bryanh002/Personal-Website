@@ -62,6 +62,7 @@ function HomePage() {
           </button>
         </div>
         <iframe
+          title="Bryan Heddle Resume"
           className="h-[90vh] w-[80vw]"
           src={resume}
           style={{
