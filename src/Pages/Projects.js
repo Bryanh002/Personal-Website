@@ -5,6 +5,7 @@ import GithubIcon from'../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.webp';
 import project2 from '../images/project2.PNG';
 import project3 from '../images/Yolo_V3.jpg';
+import resume from '../images/Bryan_Heddle_resume2.pdf'
 
 
 function ProjectPage() {
@@ -12,6 +13,7 @@ function ProjectPage() {
     const [isRActive, setIsRActive] = useState(false);
     const [isFActive, setIsFActive] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isResumeActive, setIsResumeActive] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -53,8 +55,39 @@ function ProjectPage() {
         window.location.href="https://www.linkedin.com/in/bryan-heddle-4a55361ba/"
     
     }
-  
 
+    const handleResumeClicked = () => {
+
+        setIsResumeActive(!isResumeActive);
+  
+      }
+  
+    if (isResumeActive) {
+      return (
+        <div className="relative h-screen w-screen z-50 bg-white flex items-center justify-center">
+          <div className="absolute top-5 right-5">
+            <button
+              onClick={handleResumeClicked}
+              className="text-xl font-semibold p-2 bg-gray-200 rounded-md hover:bg-gray-300"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <iframe
+            className="h-[90vh] w-[80vw]"
+            src={resume}
+            style={{
+              border: "none",
+              transform: "scale(1)", // Adjust scale as needed
+              transformOrigin: "0 0", // Scale from the top-left corner
+            }}
+          ></iframe>
+        </div>
+      );
+    }
+  
 
 
     return(
@@ -80,7 +113,7 @@ function ProjectPage() {
                 <ButtonLink to='/home' className="sm:ml-16 relative group sm:mr-16 ">Home<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
                 <ButtonLink to='/projects' className="relative group sm:mr-16">Personal Projects<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
                 <ButtonLink to='/clubs' className="relative group sm:mr-16">Clubs<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-                <ButtonLink to='/clubs' className="relative group sm:mr-16">Resume<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+                <button onClick={handleResumeClicked} className="relative group sm:mr-16">Resume<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></button>
             </nav>
             </div>
         
@@ -92,7 +125,6 @@ function ProjectPage() {
                     <ButtonLink to='/home' className="text-center">Home</ButtonLink>
                     <ButtonLink to='/projects' className="text-center">Personal Projects</ButtonLink>
                     <ButtonLink to='/clubs' className="text-center">Clubs</ButtonLink>
-                    <ButtonLink to='/resume' className="text-center">Resume</ButtonLink>
                 </nav>
                 </div>
             )}

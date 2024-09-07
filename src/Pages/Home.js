@@ -8,7 +8,7 @@ import GithubIcon from '../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.webp';
 import React, {useState, useEffect} from 'react';
 import BryanImage from '../images/Bryan_Landscape.jpg'
-import resume from '../images/Bryan_Heddle1.pdf'
+import resume from '../images/Bryan_Heddle_resume2.pdf'
 
 
 
@@ -47,6 +47,32 @@ function HomePage() {
       setIsResumeActive(!isResumeActive);
 
     }
+
+  if (isResumeActive) {
+    return (
+      <div className="relative h-screen w-screen z-50 bg-white flex items-center justify-center">
+        <div className="absolute top-5 right-5">
+          <button
+            onClick={handleResumeClicked}
+            className="text-xl font-semibold p-2 bg-gray-200 rounded-md hover:bg-gray-300"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <iframe
+          className="h-[90vh] w-[80vw]"
+          src={resume}
+          style={{
+            border: "none",
+            transform: "scale(1)", // Adjust scale as needed
+            transformOrigin: "0 0", // Scale from the top-left corner
+          }}
+        ></iframe>
+      </div>
+    );
+  }
 
 
     return (
@@ -90,23 +116,9 @@ function HomePage() {
             <ButtonLink to='/home' className="text-center">Home</ButtonLink>
             <ButtonLink to='/projects' className="text-center">Personal Projects</ButtonLink>
             <ButtonLink to='/clubs' className="text-center">Clubs</ButtonLink>
-            <button onClick={handleResumeClicked} className="text-center">Resume</button>
           </nav>
         </div>
       )}
-
-      <div className={`relative h-full w-full z-30  ${isResumeActive ? "visible":"hidden"}`}>
-        <div className="relative top-20 right-36">X</div>
-        <iframe className="h-full w-full" src={resume}
-        style={{
-          width: '100%',
-          height: '100%',
-          border: 'none',
-          transform: 'scale(1)', // Adjust scale as needed
-          transformOrigin: '0 0',  // Scale from the top-left corner
-        }}
-        ></iframe>
-      </div>
   
         {/*main page text container*/}
         <Element name="home" className="relative z-10 min-h-screen overflow-hidden bg-transparent text-white">
