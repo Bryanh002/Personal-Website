@@ -5,7 +5,7 @@ import universityPhoto from '../images/universityPhoto.jpg';
 import ButtonLink from '../Components/ButtonLink.js';
 import { DownArrow, ResumeIcon } from '../Components/Icons.js';
 import GithubIcon from '../images/GithubIcon.png';
-import LinkedinIcon from '../images/linkedinIcon.webp';
+import LinkedinIcon from '../images/linkedinIcon.png';
 import React, {useState, useEffect} from 'react';
 import BryanImage from '../images/Bryan_Landscape.jpg'
 import resume from '../images/Bryan_Heddle_resume2.pdf'

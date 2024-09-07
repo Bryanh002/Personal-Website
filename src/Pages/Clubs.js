@@ -1,7 +1,7 @@
 import React,  { useState, useRef, useEffect } from 'react';
 import ButtonLink from '../Components/ButtonLink';
 import GithubIcon from '../images/GithubIcon.png';
-import LinkedinIcon from '../images/linkedinIcon.webp';
+import LinkedinIcon from '../images/linkedinIcon.png';
 import WeMarsLogo from '../images/WeMarsLogo.png';
 import WAeroDesignLogo from '../images/WAeroDesignLogo.png'
 import resume from '../images/Bryan_Heddle_resume2.pdf'
