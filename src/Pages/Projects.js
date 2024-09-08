@@ -26,6 +26,18 @@ function ProjectPage() {
 
     };
 
+    const handleFinanceButtonClick = () => {
+
+        window.location.href = 'https://github.com/Bryanh002/Financial-Management-Website.git';
+
+    };
+
+    const handleAIButtonClick = () => {
+
+        window.location.href = 'https://github.com/Bryanh002/YOLOV3-Project.git';
+
+    };
+
 
     const handleAiTagClick = () => {
         
@@ -171,7 +183,7 @@ function ProjectPage() {
                                 <div className="w-full md:w-[850px] md:mt-2 mb-16 md:mb-0 font-bold font-serif text-lg lg:text-2xl md:text-left text-center">Financial Management Website: 
                                     <p className="font-normal text-sm md:hidden">I created a full-stack application for managing funds, investments, checking crypto and stock prices and also financial news articles. This was done with the use of a python backend utilizing multiple API's</p>
                                     <p className="font-normal lg:text-lg text-base hidden md:block">For this project I created a full-stack application that allows the user to manage their bank accounts using Plaid API, manage investments, check any stock and crypto prices in real-time, as well as easily view financial news. The Front-end was created using react-js, and the back-end utilized python with a Flask framework for sending API requests.</p>
-                                    <button className="mt-10 text-lg hidden xl:block" onClick={handleRobotButtonClick}>Click to Learn More</button>
+                                    <button className="mt-10 text-lg hidden xl:block" onClick={handleFinanceButtonClick}>Click to Learn More</button>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +196,7 @@ function ProjectPage() {
                                 <div className="w-full md:w-[850px] mt-2 font-bold font-serif text-lg lg:text-2xl text-center md:text-left">YOLOV3 Reseach Implementation:
                                 <p className="font-normal text-sm md:hidden">I trained and fine-tuned a computer vision model based off of the YOLOv3 research paper, this involved understanding the concepts of the paper and applying them. I  managed to retain a mean average precision of 51.2% compared to YOLOv3's 57.9%</p>
                                 <p className="font-normal lg:text-lg text-base hidden md:block">For this project I used a pre-made dataset to train my own Computer Vision model completely based off of the YOLOv3 research paper. This project involved reading and understanding the concepts and techniques in the paper for training weights, understanding model architecture, training the model, setting loss functions, model evaluation and last but not least optimizing and fine-tuning the model. This project was quite successful as I was able to retain a mean Average Precision of 51.2% compared to YOLOv3's 57.9% </p>
-                                <button className="mt-4 pb-10 sm:mt-9 text-lg hidden xl:block" onClick={handleRobotButtonClick} >Click to Learn More</button>
+                                <button className="mt-4 pb-10 sm:mt-9 text-lg hidden xl:block" onClick={handleAIButtonClick} >Click to Learn More</button>
                                 </div>
                             </div>
                         </div>
