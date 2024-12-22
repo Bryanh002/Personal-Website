@@ -7,9 +7,9 @@ import { DownArrow, ResumeIcon } from '../Components/Icons.js';
 import GithubIcon from '../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
 import React, {useState, useEffect, useRef} from 'react';
-import BryanImage from '../images/Bryan_Landscape.jpg';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import animation from '../images/Animation2.lottie';
+import { Player } from '@lottiefiles/react-lottie-player';
+import animation from '../images/AnimationBH.json';
 
 
 function HomePage() {
@@ -155,7 +155,8 @@ function HomePage() {
           {/* Right-Aligned Content */}
           <div>
             <div className="fixed lg:visible top-0 right-0 mt-24 lg:mr-20 lg:flex hidden items-center justify-end z-20 w-[650px] h-[650px]">
-                <DotLottieReact
+                
+                <Player
                   src={animation}
                   loop
                   autoplay
@@ -163,6 +164,7 @@ function HomePage() {
                   onLoad={handleAnimationLoad} // Trigger on load
                   style={{ width: '100%', height: '100%' }}
                 />
+                
             </div>
           </div>
         </Element>
