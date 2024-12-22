@@ -3,8 +3,10 @@
 
 
 body{
-  background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 20%, rgba(189,70,252,1) 100%);
+  /*background: rgb(63,94,251);*/
+  /*background: radial-gradient(circle, rgba(63,94,251,1) 20%, rgba(189,70,252,1) 100%);*/
+  background: rgba(11, 11, 11, 0.9);
+  background: linear-gradient(135deg, rgba(20, 20, 20, 1) 0%, rgba(11, 11, 11, 0.9) 100%);
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
@@ -16,21 +18,29 @@ body{
 }
 
 #projects {
-  background: rgb(147,194,255);
-  background: radial-gradient(circle, rgba(147,194,255,1) 50%, rgba(102,138,232,1) 100%);
+  background: rgb(64,64,64); /* Base deep grey */
+  background: radial-gradient(circle, rgba(55, 0, 0, 1) 30%, rgba(20, 20, 20, 1) 100%);
 }
 
-#home-page {
+/*#home-page {
   background: rgb(150,196,255);
   background: radial-gradient(circle, rgba(150,196,255,1) 0%, rgba(138,172,255,1) 100%);
+}*/
+
+
+#home-page {
+  background: rgb(211,211,211); /* Base light grey */
+  background: radial-gradient(circle, rgba(235,235,235,1) 0%, rgba(200,200,200,1) 100%);
 }
 
+
 #banner {
-  background: rgb(147,194,255);
-  background: radial-gradient(circle, rgba(147,194,255,1) 40%, rgba(126,162,255,1) 100%);
+  background: rgb(212,23,17); /* Approximation of the dark red in your image */
+  background: linear-gradient(90deg, rgba(70, 20, 20, 1) 0%, rgba(120, 0, 0, 1) 50%, rgba(70, 20, 20, 1) 100%);
 }
 
 #clubs {
-  background: rgb(147,194,255);
-  background: radial-gradient(circle, rgba(147,194,255,1) 85%, rgba(102,138,232,1) 100%);
+  background: rgb(64,64,64); /* Base deep grey */
+  background: linear-gradient(90deg, rgba(30, 20, 20, 1) 0%, rgba(80, 0, 0, 1) 50%, rgba(30, 20, 20, 1) 100%);
+
 }

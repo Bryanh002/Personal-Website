@@ -6,11 +6,10 @@ import ButtonLink from '../Components/ButtonLink.js';
 import { DownArrow, ResumeIcon } from '../Components/Icons.js';
 import GithubIcon from '../images/GithubIcon.png';
 import LinkedinIcon from '../images/linkedinIcon.png';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import BryanImage from '../images/Bryan_Landscape.jpg';
-
-
-
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import animation from '../images/Animation2.lottie';
 
 
 function HomePage() {
@@ -18,6 +17,14 @@ function HomePage() {
     const [isAnimated, setIsAnimated] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isResumeActive, setIsResumeActive] = useState(false);
+
+    const animationRef = useRef(null);
+
+    const handleAnimationLoad = () => {
+      if (animationRef.current) {
+        animationRef.current.setSpeed(0.5); 
+      }
+    };
 
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
@@ -79,7 +86,7 @@ function HomePage() {
     return (
       <div className="relative min-h-screen text-black">
   
-        <div className="fixed inset-0 hidden sm:block sm:h-screen bg-cover sm:bg-center z-0" style={{ backgroundImage: `url(${BryanImage})` }}></div>
+        <div className="fixed inset-0 hidden sm:block sm:h-screen bg-cover sm:bg-center z-0"></div>
 
         <div
           id="home-page" className={`fixed inset-0 h-screen transition-transform duration-2000 ease-in-out ${
@@ -102,9 +109,9 @@ function HomePage() {
           <nav>
             <button onClick={handleGitHubButtonClick}><img src={GithubIcon} className="fixed top-[9px] left-8 h-9 w-9 hover:scale-105 ease-in-out duration-300 hidden sm:block "></img></button>
             <button onClick={handleLinkedInButtonClick}><img src={LinkedinIcon} className="fixed top-1 left-24 h-12 w-12 hover:scale-105 ease-in-out duration-300 hidden sm:block"></img></button>
-            <ButtonLink to='/home' className="sm:ml-16 relative group sm:mr-16 ">Home<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-            <ButtonLink to='/projects' className="relative group sm:mr-16">Personal Projects<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
-            <ButtonLink to='/clubs' className="relative group sm:mr-16">Clubs<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+            <ButtonLink to='/home' className="sm:ml-16 relative group sm:mr-16 ">Home<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-black scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+            <ButtonLink to='/projects' className="relative group sm:mr-16">Personal Projects<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-black scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
+            <ButtonLink to='/clubs' className="relative group sm:mr-16">Clubs<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-black scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></ButtonLink>
             {/*<button onClick={handleResumeClicked} className="relative group sm:mr-16">Resume<span className="rounded-lg absolute left-0 bottom-0 w-full h-0.5 bg-blue-300 scale-x-0 transform group-hover:scale-x-100 transition-transform duration-500 ease-in-out origin-left"></span></button>*/}
           </nav>
         </div>
@@ -121,28 +128,48 @@ function HomePage() {
         </div>
       )}
   
-        {/*main page text container*/}
         <Element name="home" className="relative z-10 min-h-screen overflow-hidden bg-transparent text-white">
-          <div className="flex-grow flex flex-col sm:items-start sm:justify-start items-center justify-center pt-20 sm:pt-96 fixed inset-0 h-screen z-20 pl-0 sm:pl-20">
+          <div className="flex-grow flex sm:items-start sm:justify-start items-center justify-center pt-20 sm:pt-96 mr-20 fixed inset-0 h-screen z-20 pl-0 sm:pl-20">
 
-            <h1 className={`text-4xl sm:pr-40 pb-2 transition-colors duration-500 delay-1000 ease-in-out ${isAnimated ? 'text-white' : 'text-black'}`}
-              >Hey<span role="img" aria-label="wave">👋</span>,</h1>
+            {/* Left-Aligned Text */}
+            <div className="flex flex-col items-start justify-start ml-20">
+              <h1 className={`text-4xl sm:pr-30 pb-2 transition-colors duration-500 delay-1000 ease-in-out ${isAnimated ? 'text-white' : 'text-black'}`}>
+                Hey<span role="img" aria-label="wave">👋</span>,
+              </h1>
 
-            <h2 className={`text-6xl font-bold transition ease-in-out duration-300 delay-1000 hover:scale-110 hover:delay-0 pl-4 ${isAnimated ? 'text-white' : 'text-black'}`}>
-              I'm Bryan!</h2>
+              <h2 className={`text-6xl font-bold transition ease-in-out duration-300 delay-1000 hover:scale-110 hover:delay-0 pl-4 ${isAnimated ? 'text-white' : 'text-black'}`}>
+                I'm Bryan!
+              </h2>
 
-            <h2 className={`sm:hidden m-2 mt-6 p-4 border-2 rounded-lg shadow-lg transition ease-in-out duration-300 delay-1000 ${isAnimated ? 'text-white bg-blue-500 border-blue-500' : 'text-black bg-blue-200 border-blue-200'}`}>I'm a third year attending Western university for a degree in mechatronics and artifical intelligence systems engineering. I'm passionate about AI, embedded systems, Mechanical Design and more! I'm currently looking for interships during the summer of 2025. </h2>
+              <h2 className={`sm:hidden m-2 mt-6 p-4 border-2 rounded-lg shadow-lg transition ease-in-out duration-300 delay-1000 ${isAnimated ? 'text-white bg-blue-500 border-blue-500' : 'text-black bg-blue-200 border-blue-200'}`}>
+                I'm a third-year attending Western University for a degree in Mechatronics and Artificial Intelligence Systems Engineering. I'm passionate about AI, embedded systems, mechanical design, and more! I'm currently looking for internships during the summer of 2025.
+              </h2>
 
-            <Link to="timeline-section" smooth={true} duration={1000} className={`text-lg pt-4 sm:pl-16 transition ease-in-out delay-1000 duration-300 hover:scale-105 hover:delay-0 cursor-pointer ${isAnimated ? 'text-white' : 'text-black'}`}>
-              Click to learn more about me
-            </Link>
-            
+              <Link to="timeline-section" smooth={true} duration={1000} className={`text-lg pt-4 sm:pl-16 transition ease-in-out delay-1000 duration-300 hover:scale-105 hover:delay-0 cursor-pointer ${isAnimated ? 'text-white' : 'text-black'}`}>
+                Click to learn more about me
+              </Link>
+            </div>
+
+
+          </div>
+          {/* Right-Aligned Content */}
+          <div>
+            <div className="fixed lg:visible top-0 right-0 mt-24 lg:mr-20 lg:flex hidden items-center justify-end z-20 w-[650px] h-[650px]">
+                <DotLottieReact
+                  src={animation}
+                  loop
+                  autoplay
+                  lottieRef={animationRef} // Attach the ref
+                  onLoad={handleAnimationLoad} // Trigger on load
+                  style={{ width: '100%', height: '100%' }}
+                />
+            </div>
           </div>
         </Element>
   
   
         <Element name="timeline-section">
-        <div id="banner" className="relative h-6 shadow-xl z-30">
+        <div id="banner" className="relative h-4 shadow-xl z-30">
           {/*<div className="relative top-4 bg-blue-200 shadow-md rounded-md scale-x-75 h-6 z-30"></div>*/}
         </div>
         </Element>
@@ -154,7 +181,7 @@ function HomePage() {
                 <img src={universityPhoto} alt="University" className="w-full h-full object-cover" />
                 <h1 className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white bg-black bg-opacity-50">My Timeline</h1>
               </div>
-              <div id="banner" className="relative h-6 shadow-xl z-30"></div>
+              <div id="banner" className="relative h-4 shadow-xl z-30"></div>
               <div className="pt-5">
               <Timeline />
               </div>
@@ -163,10 +190,10 @@ function HomePage() {
           <div className="bg-slate-200 h-72">
             <div>
             <div className="text-3xl p-2 pt-8 group border w-full flex justify-center" style={{ clipPath: 'inset(0 0 0 0 )' }}>
-                <div className="[grid-area:1/1] mt-5 flex items-center justify-center sm:mb-0  h-20 w-full transition ease-in-out duration-1000 hover:translate-y-10"><DownArrow /></div>
+                <div className="[grid-area:1/1] mt-6 flex items-center justify-center sm:mb-0  h-20 w-full transition ease-in-out duration-1000 hover:translate-y-10"><DownArrow /></div>
             </div>
             <div className="flex justify-center w-full">
-                <ButtonLink to='/projects' className="text-xl font-semibold bg-blue-300 rounded-lg mt-2 sm:mt-2 px-4 py-4 shadow-md hover:scale-105 ease-in-out duration-300 hover:shadow-lg">My Projects!</ButtonLink>
+                <ButtonLink to='/projects' className="text-xl font-semibold bg-button-gradient text-white rounded-lg mt-2 sm:mt-2 px-4 py-4 shadow-md hover:scale-105 ease-in-out duration-300 hover:shadow-lg">My Projects!</ButtonLink>
             </div>
             </div>
           </div>
