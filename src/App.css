@@ -19,7 +19,7 @@ body{
 
 #projects {
   background: rgb(64,64,64); /* Base deep grey */
-  background: radial-gradient(circle, rgba(55, 0, 0, 1) 30%, rgba(20, 20, 20, 1) 100%);
+  background: radial-gradient(circle, rgba(26, 26, 26, 0.9) 40%, rgba(43, 43, 43, 0.9) 80%);
 }
 
 /*#home-page {
@@ -36,11 +36,12 @@ body{
 
 #banner {
   background: rgb(212,23,17); /* Approximation of the dark red in your image */
-  background: linear-gradient(90deg, rgba(70, 20, 20, 1) 0%, rgba(120, 0, 0, 1) 50%, rgba(70, 20, 20, 1) 100%);
+  background: linear-gradient(90deg, rgba(160, 20, 20, 1) 0%, rgba(212, 0, 0, 1) 50%, rgba(160, 20, 20, 1) 100%);
 }
 
 #clubs {
   background: rgb(64,64,64); /* Base deep grey */
-  background: linear-gradient(90deg, rgba(30, 20, 20, 1) 0%, rgba(80, 0, 0, 1) 50%, rgba(30, 20, 20, 1) 100%);
+  /*background: linear-gradient(90deg, rgba(30, 20, 20, 1) 0%, rgba(10, 7, 50, 1) 50%, rgba(30, 20, 20, 1) 100%);*/
+  background: linear-gradient(135deg, rgba(43, 43, 43, 1) 0%, rgba(43, 43, 43, 1) 100%)
 
 }

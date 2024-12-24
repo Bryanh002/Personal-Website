@@ -8,13 +8,13 @@ module.exports = {
     extend: {
 
       boxShadow: {
-        'light': '0px 4px 6px rgba(255, 255, 255, 0.2)',
-        'colored': '0px 4px 6px rgba(0, 0, 0, 0.5), 0px 6px 20px rgba(255, 0, 0, 0.3)',
-        'slight': '0px 6px 12px rgba(255, 0, 0, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.5)', // Medium shadow
-        'great': '0px 10px 20px rgba(255, 0, 0, 0.3), 0px 8px 16px rgba(0, 0, 0, 0.5)', // Large shadow
+        'light': '0px 6px 8px rgba(20, 7, 128, 0.2)',
+        'colored': '0px 4px 6px rgba(0, 0, 0, 0.5), 0px 6px 20px rgba(0, 0, 128, 0.3)',
+        'slight': '0px 6px 12px rgba(2, 7, 93, 0.2), 0px 4px 8px rgba(10, 7, 75, 0.5)', // Medium shadow
+        'great': '0px 10px 20px rgba(0, 0, 128, 0.3), 0px 8px 16px rgba(0, 0, 128, 0.5)', // Large shadow
       },
       backgroundImage: {
-        'button-gradient': 'radial-gradient(circle, rgba(120,0,0,1) 60%, rgba(95,0,0,1) 100%)',
+        'button-gradient': 'radial-gradient(circle, rgba(210,0,0,1) 70%, rgba(195,0,0,1) 100%)',
         'border-gradient': 'radial-gradient(circle, rgba(54,54,54,1) 50%, rgba(30,30,30,1) 100%);',
         'banner': 'linear-gradient(135deg, #002B5C 0%, #001F3F 100%);',
       },
@@ -35,6 +35,7 @@ module.exports = {
           DEFAULT: '#800000', // Base maroon
           light: '#A52A2A',   // Slightly lighter maroon
           dark: '#660000',    // Darker maroon
+          brick: '#b22222',
         },
         gray2: {
           100: '#7a7a7a',
@@ -43,7 +44,11 @@ module.exports = {
         navy: {
           DEFAULT: '#002B5C',
           dark: '#001F3F',
+          deep: '#1c3b58',
         },
+        gold: {
+          DEFAULT: '#b08d57',
+        }
       },
 
       transitionDelay: {

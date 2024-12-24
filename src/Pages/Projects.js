@@ -146,18 +146,18 @@ function ProjectPage() {
             <div className="pt-24">
                 <div className="h-[1700px] sm:h-[1300px] w-full">
                     <div className="h-20 w-full flex justify-center items-center">
-                        <button onClick={handleAiTagClick} className={`rounded-full border-maroon bg-button-gradient border-2 text-white border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-slight hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isAiActive ? 'text-green-400' : ''}`}>AI</button>
-                        <button onClick={handleARoboticsTagClick} className={`rounded-full border-maroon bg-button-gradient text-white border-2 border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-slight hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isRActive ? 'text-green-400' : ''}`}>Robotics</button>
-                        <button onClick={handleFullStackTagClick} className={`rounded-full border-maroon bg-button-gradient text-white border-2 border-solid ml-4 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-slight hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isFActive ? 'text-green-400' : ''}`}>FullStack</button>
+                        <button onClick={handleAiTagClick} className={`rounded-full border-navy bg-navy-deep border-2 text-white border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isAiActive ? 'text-green-400' : ''}`}>AI</button>
+                        <button onClick={handleARoboticsTagClick} className={`rounded-full border-navy bg-navy-deep text-white border-2 border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isRActive ? 'text-green-400' : ''}`}>Robotics</button>
+                        <button onClick={handleFullStackTagClick} className={`rounded-full border-navy bg-navy-deep text-white border-2 border-solid ml-4 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isFActive ? 'text-green-400' : ''}`}>FullStack</button>
                     </div>
-                    <div className="bg-maroon h-5 scale-x-95 w-full rounded-full border-maroon-dark border-2 border-solid shadow-slight"></div>
+                    <div className="bg-slate-300 h-5 scale-x-95 w-full rounded-full border-slate-200 border-2 border-solid shadow-slight"></div>
 
 
                     {/*Project Cards*/}
                     <div className="h-full w-full flex flex-col">
                         <div className={`flex justify-center sm:px-20 px-5 ${isFActive ? 'hidden' : 'visible'} ${isAiActive ? 'hidden' : 'visible'}`}>
                                 <div id="robotic-arm" className="mt-14 sm:h-96 w-full h-[400px] rounded-lg flex flex-col sm:flex-row ease-in-out duration-300">
-                                    <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-gray2-200 border-4 border-solid">
+                                    <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-slate-300 border-4 border-solid">
                                         <img src={Roboticarm} className="w-full h-56 sm:h-full"></img>
                                     </div>
                                     <div className="tracking-wide w-full md:w-[850px] md:mt-16 font-bold font-serif text-lg lg:text-2xl md:text-left text-center">
@@ -173,7 +173,7 @@ function ProjectPage() {
 
                         <div className={`flex justify-center sm:px-20 px-5 ${isRActive ? 'hidden' : 'visible' } ${isAiActive ? 'hidden' : 'visible' }`}>
                             <div id="Financial Website" className="mt-14 sm:h-80 w-full h-[400px] rounded-lg flex flex-col sm:flex-row ease-in-out duration-300">
-                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg border-gray2-200 border-4 border-solid overflow-hidden">
+                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg border-slate-300 border-4 border-solid overflow-hidden">
                                     <img src={project2} className='w-full h-56 sm:h-full'></img>
                                 </div>
                                 <div className="w-full  tracking-wide md:w-[850px] md:mt-14 mb-16 md:mb-0 font-bold font-serif text-lg lg:text-2xl md:text-left text-center">Financial Management Website: 
@@ -186,7 +186,7 @@ function ProjectPage() {
 
                         <div className={`flex justify-center sm:px-20 px-5 ${isFActive ? 'hidden' : 'visible' } ${isRActive ? 'hidden' : 'visible' }`}>
                             <div id="Ai-project" className=" mt-14 sm:h-80 w-full h-[400px] rounded-lg flex flex-col sm:flex-row ease-in-out duration-300">
-                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-gray2-200 border-4 border-solid">
+                                <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-slate-300 border-4 border-solid">
                                     <img src={project3} className='w-full h-full'></img>
                                 </div>
                                 <div className="w-full md:w-[850px] tracking-wide mt-8 font-bold font-serif text-lg lg:text-2xl text-center md:text-left">YOLOV3 Reseach Implementation:
