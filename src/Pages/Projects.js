@@ -146,9 +146,9 @@ function ProjectPage() {
             <div className="pt-24">
                 <div className="h-[1700px] sm:h-[1300px] w-full">
                     <div className="h-20 w-full flex justify-center items-center">
-                        <button onClick={handleAiTagClick} className={`rounded-full border-navy bg-navy-deep border-2 text-white border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isAiActive ? 'text-green-400' : ''}`}>AI</button>
-                        <button onClick={handleARoboticsTagClick} className={`rounded-full border-navy bg-navy-deep text-white border-2 border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isRActive ? 'text-green-400' : ''}`}>Robotics</button>
-                        <button onClick={handleFullStackTagClick} className={`rounded-full border-navy bg-navy-deep text-white border-2 border-solid ml-4 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isFActive ? 'text-green-400' : ''}`}>FullStack</button>
+                        <button onClick={handleAiTagClick} className={`rounded-full border-navy bg-navy-deep border-2 border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isAiActive ? 'text-black bg-white' : ''}`}>AI</button>
+                        <button onClick={handleARoboticsTagClick} className={`rounded-full border-navy bg-navy-deep border-2 border-solid ml-4 sm:mr-20 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isRActive ? 'text-black bg-white' : ''}`}>Robotics</button>
+                        <button onClick={handleFullStackTagClick} className={`rounded-full border-navy bg-navy-deep border-2 border-solid ml-4 sm:text-base text-sm sm:ml-14 px-4 py-1 shadow-light hover:scale-105 hover:shadow-colored ease-in-out duration-300 ${isFActive ? 'text-black bg-white' : ''}`}>FullStack</button>
                     </div>
                     <div className="bg-slate-300 h-5 scale-x-95 w-full rounded-full border-slate-200 border-2 border-solid shadow-slight"></div>
 
