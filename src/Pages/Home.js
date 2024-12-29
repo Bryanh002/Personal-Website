@@ -133,19 +133,19 @@ function HomePage() {
 
             {/* Left-Aligned Text */}
             <div className="flex flex-col items-start justify-start ml-20">
-              <h1 className={`text-4xl sm:pr-30 pb-2 transition-colors duration-500 delay-1000 ease-in-out ${isAnimated ? 'text-white' : 'text-black'}`}>
-                Hey<span role="img" aria-label="wave">👋</span>,
+              <h1 className={`sm:text-4xl text-2xl pl-2 sm:pr-30 pb-2 transition-colors duration-500 delay-1000 ease-in-out ${isAnimated ? 'text-white' : 'text-black'}`}>
+                Hey,
               </h1>
 
-              <h2 className={`text-6xl font-bold transition ease-in-out duration-300 delay-1000 hover:scale-110 hover:delay-0 pl-4 ${isAnimated ? 'text-white' : 'text-black'}`}>
+              <h2 className={`sm:text-6xl text-4xl font-bold transition ease-in-out duration-300 delay-1000 hover:scale-110 hover:delay-0 sm:pl-4 pl-2 ${isAnimated ? 'text-white' : 'text-black'}`}>
                 I'm Bryan!
               </h2>
 
-              <h2 className={`sm:hidden m-2 mt-6 p-4 border-2 rounded-lg shadow-lg transition ease-in-out duration-300 delay-1000 ${isAnimated ? 'text-white bg-blue-500 border-blue-500' : 'text-black bg-blue-200 border-blue-200'}`}>
+              <h2 className={`sm:hidden m-2 mt-6 p-4 border-2 rounded-lg shadow-lg transition ease-in-out duration-300 delay-1000 ${isAnimated ? 'text-black bg-white border-white' : 'text-white bg-slate-700 border-slate-700'}`}>
                 I'm a third-year attending Western University for a degree in Mechatronics and Artificial Intelligence Systems Engineering. I'm passionate about AI, embedded systems, mechanical design, and more! I'm currently looking for internships during the summer of 2025.
               </h2>
 
-              <Link to="timeline-section" smooth={true} duration={1000} className={`text-lg pt-4 sm:pl-16 transition ease-in-out delay-1000 duration-300 hover:scale-105 hover:delay-0 cursor-pointer ${isAnimated ? 'text-white' : 'text-black'}`}>
+              <Link to="timeline-section" smooth={true} duration={1000} className={` text-md sm:text-lg pt-4 sm:pl-16 pl-2 transition ease-in-out delay-1000 duration-300 hover:scale-105 hover:delay-0 cursor-pointer ${isAnimated ? 'text-white' : 'text-black'}`}>
                 Click to learn more about me
               </Link>
             </div>

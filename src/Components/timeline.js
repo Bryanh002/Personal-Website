@@ -14,7 +14,7 @@ const Timeline = () => {
         <div className="timeline-item mb-3">
           <div className="year text-lg font-bold text-gray-800 mb-1">2023</div>
           <div className="details text-gray-700">
-            <p className="text-sm sm:text-base">Got into Mechatronics program with Artificial Intelligence Systems Engineering Dual Degree <span role="img" aria-label="trophy">🏆</span></p>
+            <p className="text-sm sm:text-base">Got into Mechatronics program with Artificial Intelligence Systems Engineering Dual Degree </p>
             <p className="text-sm sm:text-base">Joined WeMars Club <span role="img" aria-label="rocket">🚀</span></p>
             <p className="text-sm sm:text-base">Joined Aero Design Club <span role="img" aria-label="plane">✈️</span></p>
           </div>
@@ -22,8 +22,8 @@ const Timeline = () => {
         <div className="timeline-item mb-1">
           <div className="year text-lg font-bold text-gray-800 mb-1">2024</div>
           <div className="details text-gray-700">
-            <p className="text-sm sm:text-base">Became WeMars Lead Software Engineer <span role="img" aria-label="rocket">🚀</span></p>
-            <p className="text-sm sm:text-base">Started Working at Outlier AI <span role="img" aria-label="rocket">🏆</span></p>
+            <p className="text-sm sm:text-base">Became WeMars Lead Software Engineer </p>
+            <p className="text-sm sm:text-base">Started Working at Outlier AI <span role="img" aria-label="trophy">🏆</span></p>
             <p className="text-sm sm:text-base">Joined Skylark Cube Satellite Team <span role="img" aria-label="satellite">🛰️</span></p>
           </div>
         </div>

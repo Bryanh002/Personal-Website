@@ -157,8 +157,8 @@ function ProjectPage() {
                     <div className="h-full w-full flex flex-col">
                         <div className={`flex justify-center sm:px-20 px-5 ${isFActive ? 'hidden' : 'visible'} ${isAiActive ? 'hidden' : 'visible'}`}>
                                 <div id="robotic-arm" className="mt-14 sm:h-96 w-full h-[400px] rounded-lg flex flex-col sm:flex-row ease-in-out duration-300">
-                                    <div className="w-full sm:w-[510px] h-56 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-slate-300 border-4 border-solid">
-                                        <img src={Roboticarm} className="w-full h-56 sm:h-full"></img>
+                                    <div className="w-full sm:w-[510px] h-72 sm:h-full scale-75 scale-y-75 sm:scale-y-90 sm:scale-90 shadow-md rounded-lg overflow-hidden border-slate-300 border-4 border-solid">
+                                        <img src={Roboticarm} className="w-full h-72 sm:h-full"></img>
                                     </div>
                                     <div className="tracking-wide w-full md:w-[850px] md:mt-16 font-bold font-serif text-lg lg:text-2xl md:text-left text-center">
                                         <p>IOT Robot Arm:</p>
